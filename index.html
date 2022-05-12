@@ -1,118 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a solution to the Crowdfunding product page challenge on Frontend Mentor">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Crowdfunding product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/systemize.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
-  About
-  Discover
-  Get Started
 
-  Mastercraft Bamboo Monitor Riser
-  A beautiful & handcrafted monitor stand to reduce neck and eye strain.
+  <header>
+    <h1 class="hide-visually">Crowdfund</h1>
 
-  Back this project
-  Bookmark
+    <!-- Main navigation -->
 
-  $89,914 of $100,000 backed
-  5,007 total backers
-  56 days left
+    <nav>
+      <ul class="nav-bar">
 
-  About this project
+        <!-- Logo -->
 
-  The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
-  to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
-  your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
+        <li class="nav-logo">
+          <div class="wr-logo"><img src="images/logo.svg" alt="Crowdfund"></div>
+        </li>
 
-  Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
-  to allow notepads, pens, and USB sticks to be stored under the stand.
-  
-  Bamboo Stand
-  Pledge $25 or more
-  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
-  you’ll be added to a special Backer member list.
-  101 left
-  Select Reward
+        <!-- Hamburger and manu items -->
+        
+        <li class="nav-menu">
+          <div class="hamburger-wrapper"><img src="images/icon-hamburger.svg" alt="Menu"></div>
 
-  Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-  member list. Shipping is included.
-  64 left
-  Select Reward
+          <div class="menu-wrapper">
+            <ul class="menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Discover</a></li>
+              <li><a href="#">Get Started</a></li>
+            </ul>
+          </div>
 
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-  to our Backer member list. Shipping is included.
-  0 left
-  Out of Stock
+        </li>
 
-  <!-- Selection modal start -->
+      </ul>
+    </nav>
+  </header>
 
-  Back this project
-  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+  <main>
+    <article>
 
-  Pledge with no reward
-  Choose to support us without a reward if you simply believe in our project. As a backer, 
-  you will be signed up to receive product updates via email.
+      <!-- Hero part -->
 
-  Bamboo Stand
-  Pledge $25 or more
-  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  you’ll be added to a special Backer member list.
-  101 left
+      <div class="fundraise">
+        <h2>Mastercraft Bamboo Monitor Riser</h2>
 
-  <!-- Selected pledge start -->
-  Enter your pledge
-  $25
-  Continue
-  <!-- Selected pledge end -->
+        <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 
-  Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
-  64 left
+        <div class="action-wrapper">
+          <button type="button">Back this project</button>
 
-  <!-- Selected pledge start -->
-  Enter your pledge
-  $75
-  Continue
-  <!-- Selected pledge end -->
+          <div><img src="images/icon-bookmark.svg" alt="Bookmark">
+            <div><span>Bookmark</span></div>
+          </div>
+        </div>
+      </div>
 
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left
+      <!-- Fundraising statistics -->
 
-  <!-- Selected pledge  start -->
-  Enter your pledge
-  $200
-  Continue
-  <!-- Selected pledge end -->
+      <div class="stats">
+        <div class="money-backed"><span>$89,914</span><span>of $100,000 backed</span></div>
+        <div class="devider"></div>
 
-  <!-- Selection modal end -->
+        <div class="backers"><span>5,007</span><span>total backers</span></div>
+        <div class="devider"></div>
 
-  <!-- Success modal start -->
+        <div class="days-left"><span>56</span><span>days left</span></div>
+      </div>
 
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
+      <!-- Section about -->
 
-  <!-- Success modal end -->
+      <section class="about">
+        <div class="about-wrapper">
+          <h3>About this project</h3>
+
+          <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more
+            comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and
+            make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+
+          <p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to
+            allow notepads, pens, and USB sticks to be stored under the stand.</p>
+
+          <!-- Card bamboo stand -->
+
+          <div class="bamboo-edition">
+            <h4>Bamboo Stand</h4>
+            <span>Pledge $25 or more</span>
+            <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+              you&apos;ll be added to a special Backer member list.</p>
+            <div><span>101</span> <span>left</span></div>
+            <button type="button">Select Reward</button>
+          </div>
+
+          <!-- Card black edition stand -->
+          <div class="black-edition">
+            <h4>Black Edition Stand</h4>
+            <span class="pledge">Pledge $75 or more</span>
+            <p>You get a Black Special Edition computer stand and a personal thank you. You&apos;ll be added to our
+              Backer member list. Shipping is included.</p>
+            <div class="item-left"><span>64</span><span>left</span></div>
+            <button type="button">Select Reward</button>
+          </div>
+
+          <!-- Card mahogany special edition -->
+
+          <div class="mahogany-edition">
+            <h4>Mahogany Special Edition</h4>
+            <span class="pledge">Pledge $200 or more</span>
+            <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You&apos;ll be
+              added to our Backer member list. Shipping is included.</p>
+            <div class="item-left"><span>0</span><span>left</span></div>
+            <button type="button">Out of Stock</button>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Select modal -->
+
+  <div class="modal-select">
+    <h3>Back this project</h3>
+    <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+    <form>
+      <fieldset>
+        <legend>Select a pledge to back this project</legend>
+        <ul>
+
+          <!-- Option no reward -->
+
+          <li class="no-reward">
+            <input type="radio" id="no_reward" name="pledge" value="no_reward">
+
+            <label for="no_reward">Pledge with no reward</label>
+
+            <p>Choose to support us without a reward if you simply believe in our project. As a backer, you will be
+              signed up to receive product updates via email.</p>
+
+            <hr>
+
+            <button type="button"><strong>Continue</strong></button>
+          </li>
+
+          <!-- Option Bamboo stand -->
+
+          <li class="bamboo-stand">
+            <div class="pledge-head">
+              <input type="radio" id="bamboo_stand" name="pledge" value="bamboo_stand">
+
+              <label for="bamboo_stand">Bamboo Stand</label>
+
+              <div class="pledge-note"><span>Pledge $25 or more</span></div>
+
+              <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign,
+                and you&apos;ll be added to a special Backer member list.</p>
+
+              <div class="item-left"><span>101</span><span>left</span></div>
+            </div>
+
+            <hr>
+
+            <div class="pledge-footer">
+              <label for="">Enter your pledge</label>
+
+              <input type="number" name="bamboo_pledge" id="bamboo_pledge" min="25" step="1" value="25">
+
+              <button type="button">Continue</button>
+            </div>
+          </li>
+
+          <!-- Option black edition stand -->
+
+          <li class="black-edition">
+            <div class="pledge-head">
+              <input type="radio" id="black_edition" name="pledge" value="black_edition">
+
+              <label for="black_edition">Black Edition Stand</label>
+
+              <div class="pledge-note"><span>Pledge $75 or more</span></div>
+
+              <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                member list. Shipping is included.</p>
+
+              <div class="item-left"><span>64</span><span>left</span></div>
+            </div>
+
+            <hr>
+
+            <div class="pledge-footer">
+              <label for="black_pledge">Enter your pledge</label>
+
+              <input type="number" name="black_pledge" id="black_pledge" min="75" step="1" value="75">
+
+              <button type="button">Continue</button>
+            </div>
+          </li>
+
+          <!-- Option mahogany special edition -->
+
+          <li class="mahogany-edition">
+            <div class="pledge-head">
+              <input type="radio" id="mahogany_edition" name="pledge" value="mahogany_edition">
+
+              <label for="mahogany_edition">Mahogany Special Edition</label>
+
+              <div class="pledge-note"><span>Pledge $200 or more</span></div>
+
+              <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be
+                added
+                to our Backer member list. Shipping is included.</p>
+
+              <div class="item-left"><span>0</span><span>left</span></div>
+            </div>
+
+            <hr>
+
+            <div class="pledge-footer">
+              <label for="mahogany_pledge">Enter your pledge</label>
+
+              <input type="number" name="mahogany_pledge" id="mahogany_pledge" min="200" step="1" value="200">
+
+              <button type="button">Continue</button>
+            </div>
+          </li>
+
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- Success modal -->
+
+  <div class="modal-success">
+    <div class="wrapper-check">
+      <img src="images/icon-check.svg" alt="Backed successfully">
+    </div>
+
+    <h3>Thanks for your support!</h3>
+
+    <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+      an email once our campaign is completed.</p>
+
+    <button type="button">Got it!</button>
+  </div>
+
+  <footer>
+    <p class="body-centered">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://twitter.com/ShameerKamalud1" target="_blank">Shameer Kamaludeen</a>.
+    </p>
+  </footer>
 </body>
+
 </html>
