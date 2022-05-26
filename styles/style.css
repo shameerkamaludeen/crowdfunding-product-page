@@ -279,6 +279,7 @@ header nav {
 .fundraise .bookmark-wrapper {
     height: 5.7em;
     margin-left: 1em;
+    cursor: poi;
 }
 
 .fundraise .bookmark-wrapper>svg {
@@ -395,6 +396,11 @@ progress::-webkit-progress-bar {
     width: 11.42em;
 }
 
+.about button:hover,
+.about button:focus {
+    background-color: hsl(176, 72%, 28%);
+}
+
 .about button:disabled {
     opacity: 40%;
     background-color: hsl(0, 0%, 48%);
@@ -474,6 +480,7 @@ progress::-webkit-progress-bar {
 .modal-select .pledge-header input {
     grid-column: 1;
     grid-row: 1;
+    cursor: pointer;
 }
 
 .modal-select .pledge-header label {
@@ -482,6 +489,7 @@ progress::-webkit-progress-bar {
     margin: auto 0;
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .modal-select .pledge-header label span:first-child {
@@ -588,6 +596,7 @@ progress::-webkit-progress-bar {
     padding: 0 0.75em 0 3em;
     outline: none;
     caret-color: hsl(176, 50%, 47%);
+    cursor: pointer;
 }
 
 .modal-select .pledge-footer input:focus {
@@ -607,6 +616,11 @@ progress::-webkit-progress-bar {
 .modal-select .pledge-footer button {
     width: 8.2em;
     background-color: hsl(176, 50%, 47%);
+}
+
+.modal-select .pledge-footer button:hover,
+.modal-select .pledge-footer button:focus {
+    background-color: hsl(176, 72%, 28%);
 }
 
 .modal-select .error-wrapper {
@@ -665,6 +679,11 @@ progress::-webkit-progress-bar {
     margin-right: auto;
     margin-left: auto;
     display: block;
+}
+
+.modal-success button:hover,
+.modal-success button:focus {
+    background-color: hsl(176, 72%, 28%);
 }
 
 /* || Footer */
