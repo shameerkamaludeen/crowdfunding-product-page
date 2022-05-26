@@ -279,7 +279,7 @@ header nav {
 .fundraise .bookmark-wrapper {
     height: 5.7em;
     margin-left: 1em;
-    cursor: poi;
+    cursor: pointer;
 }
 
 .fundraise .bookmark-wrapper>svg {
