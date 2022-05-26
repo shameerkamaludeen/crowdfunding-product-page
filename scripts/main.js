@@ -81,9 +81,9 @@ function closeModalSelect(submitClose) {
     const modalSelect = document.querySelector('.modal-select');
 
     // Scroll to top on close
-    if(submitClose) {
+    if (submitClose) {
         document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;    
+        document.documentElement.scrollTop = 0;
     }
     modalSelect.scrollTop = 0;
 
@@ -132,21 +132,26 @@ form.addEventListener('submit', event => {
         } else if (pledgeAmtElement.validity.rangeUnderflow) {
             errorMsgElement.firstElementChild.textContent = `Invalid (minimum $${pledgeAmtElement.min})`;
         }
-    } else if (pledgeAmtElement !== null && pledgeAmtElement !== 'undefined') {
-        /* --Update Stats stars-- */
-        const moneyBackedElement = document.querySelector('.stats .money-backed span');
-        totalMoneyBacked = Number(pledgeAmtElement.value) + totalMoneyBacked;
-        // Formatting number to local format
-        moneyBackedElement.textContent = `$${totalMoneyBacked.toLocaleString('en-US')}`
     } else {
-        /* --Update Stats stars-- */
-        const backersElement = document.querySelector('.stats .backers span');
-        totablBackers++;
-        backersElement.textContent = totablBackers.toLocaleString('en-US');
+        if (pledgeAmtElement !== null && pledgeAmtElement !== 'undefined') {
+            /* --Update Stats stars-- */
+            const moneyBackedElement = document.querySelector('.stats .money-backed span');
+            totalMoneyBacked = Number(pledgeAmtElement.value) + totalMoneyBacked;
+            // Formatting number to local format
+            moneyBackedElement.textContent = `$${totalMoneyBacked.toLocaleString('en-US')}`
+            const backersElement = document.querySelector('.stats .backers span');
+            totablBackers++;
+            backersElement.textContent = totablBackers.toLocaleString('en-US');
+        } else {
+            /* --Update Stats stars-- */
+            const backersElement = document.querySelector('.stats .backers span');
+            totablBackers++;
+            backersElement.textContent = totablBackers.toLocaleString('en-US');
+        }
+        closeModalSelect(true);
+        const modalSuccessElement = document.querySelector('.modal-success');
+        modalSuccessElement.classList.add('active');
     }
-    closeModalSelect(true);
-    const modalSuccessElement = document.querySelector('.modal-success');
-    modalSuccessElement.classList.add('active');
 });
 
 // Event to select backing option from about component
@@ -164,7 +169,7 @@ for (const backOption of backOptions) {
         backOptionRadio.checked = true;
         selectedBackOption = backOptionRadio;
         backOptionRadio.parentNode.parentNode.classList.add('active');
-        backOptionRadio.parentNode.parentNode.scrollIntoView();
+        backOptionRadio.parentNode.parentNode.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 }
 
@@ -175,7 +180,9 @@ projectBackElement.addEventListener('click', () => {
     modalSelect.classList.add('active');
 });
 
+// Bookmark event
 const bookmarkElement = document.querySelector('.fundraise .bookmark-wrapper');
 bookmarkElement.addEventListener('click', () => {
     bookmarkElement.classList.add('active');
+    document.querySelector('.fundraise .bookmark span').textContent = 'Bookmarked';
 });
